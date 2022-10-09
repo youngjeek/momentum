@@ -1,0 +1,188 @@
+
+ /*block형은 margin: 0 auto 위아래 여백0 좌우 자동으로 정렬한다. 아무정의없을때
+ block형식은 width: 100%상태이다.
+ /*inline속성 가운데 정렬 text-align다만 내부 텍스트까지 다 정렬됨 */
+ :root {
+  /* color */
+  --white-color: #ffeeff50;
+  --black-color: #232233;
+  --blue-color:#9db0eb;
+  --red-color:#e04b7c60;
+  --grey-dark-color: #5f5f5f;
+  --grey-light-color: #aaaaaa;
+  /* size */
+  --side-padding: 10px;
+  --side-width: 250px;
+  /* font size */
+  --font-large: 50px;
+  --font-medium: 20px;
+  --font-small:15px;
+  --font-micro:3px;
+ }
+ *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* 박스사이즈 보더 패딩 합친값으로 */
+ }
+ /* 글씨체와 배경 설정*/
+ body{
+  font-family: Roboto;
+  color: var(--black-color);
+  background-size: cover;
+}
+header {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  padding: var(--padding);
+  margin: 5px;
+}
+header .userinfo{
+  font-size: var(--font-medium);
+}
+header .userinfo i{
+  color: var(--black-color);
+}
+header .sttngImg i{
+  color: var(--black-color);
+}
+.main {
+  display: inline-flex;
+  height: 100vh;
+  width: 100%;
+  padding: var(--side-padding);
+  justify-content: space-around;
+}
+#weatherContainer{
+  padding: var(--side-padding);
+  width: var(--side-width);
+  height: 100px;
+  background-color: var(--white-color);
+  font-size:var(--font-medium);
+}
+#weatherData{
+  text-align: end;
+}
+#quote{
+  font-size:var(--font-medium);
+  background-color: var(--white-color);
+  max-width: var(--side-width);
+  padding: var(--side-padding);
+
+  }
+#emptybox{
+    height: 10px;
+    margin: 5px;
+}
+#login-form{
+  font-size: var(--font-medium);
+}
+#todo-list{
+  list-style: none;
+}
+.main .centre{
+  flex-grow: 3;
+  align-self: center;
+  text-align: center;
+  text-shadow: var(--font-micro) var(--font-micro) var(--font-micro) var(--blue-color);
+  font-size: var(--font-large);
+}
+.main .rightbox{
+  max-width: 250px;
+  flex-grow: 1;
+}
+.rightbox #todoContainer{
+  padding: var(--side-padding);
+  width: 250px;
+  background-color: var(--white-color);
+  font-size:var(--font-medium);
+}
+.rightbox #dDayContainer{
+  padding: var(--side-padding);
+  width: 250px;
+  background-color: var(--white-color);
+  font-size:var(--font-medium);
+}
+.selected{
+  text-decoration: line-through;
+  color: var(--grey-light-color);
+}
+button{
+  border: none;
+  padding-left: var(--side-padding);
+  background: none;
+}
+input{
+  padding : var(--side-padding);
+  width: var(--side-width-);
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid var(--grey-light-color);
+  cursor: pointer;
+}
+input[type="checkbox"]{
+
+  background: var(--white-color);
+  border-radius: 10px;
+  height: calc(var(--font-medium)/2);
+  width: calc(var(--font-medium));
+}
+.hidden {
+  display: none;
+}
+
+.optional #centerAlign{
+    width: var(--side-width);
+    margin: auto;
+}
+.otional #alertMsg{
+    background: var(--red-color);
+    width: calc(var(--side-width)*2);
+    margin: auto;
+    text-align: center;
+    outline: 0;
+}
+/* Modal Style from https://www.w3schools.com/howto/howto_css_modals.asp */
+/* The Modal (background) */
+.otional .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 15em; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* 스크롤 없이 Enable scroll if needed */
+/*    background-color: #ffffff;  Fallback color */
+    background-color: var(--grey-light-color); /* Black w/ opacity */
+    opacity: 0.6;}
+  /* Modal Content */
+.otional .modal  .modalContent {
+    background-color: var(--white-color);
+    opacity: 0.5;
+    height : 200px;
+    padding: 5% 20%;
+    border: 0;
+    text-align: center;}
+
+  /* Modal Content div */
+.otional .modal  .modalContent div {
+    float: left;
+    font-weight: bold;
+    font-size: var(--font-large);}
+  /* The Close Button */
+.otional .modal  .close {
+    float: right;
+    margin: -5% -25%;
+    color: var(--grey-light-color);
+    font-size: 40px;
+    font-weight: bold;}
+.otional .modal  .close:hover,
+.otional .modal  .close:focus {
+    color: var(--grey-dark-color);
+    text-decoration: none;
+    cursor: pointer;}
